@@ -1,6 +1,7 @@
 from SineWavePlugin import SineWavePlugin
+import math
 
-class WavePlugin(SineWavePlugin):
+class TriangleWavePlugin(SineWavePlugin):
 
     def getValue( self, cSample, value ):
         angle = self._getAngle(cSample)

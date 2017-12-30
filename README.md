@@ -247,3 +247,13 @@ for i in range(0,len(data)):
 file = WaveFile.WaveFile(samplingRate,resolution,channels)
 file.save( "sound.wav", data )
 ```
+
+# Waveforms
+The WaveGenerator comes with plugins for the most common wave forms:
+* SineWavePlugin
+* TriangleWavePlugin
+* SquareWavePlugin
+* SawUpWavePlugin
+* SawDownWavePlugin
+
+Try to use TriangleWavePlugin instead of SineWavePlugin and watch the wave in your sound editor.
