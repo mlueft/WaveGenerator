@@ -104,6 +104,7 @@ print min(data)
 # Example 3 - Writing a wave file 
 In this example we write a wave file containing the generates wave.
 So we can visualize the wave in an wave editor.(e.g. audacity)
+see https://github.com/mlueft/WaveFile
 
 ```python
 from WaveGenerator.WaveGenerator import WaveGenerator
@@ -166,7 +167,7 @@ data = w.generate( 1000 )
 for i in range(0,len(data)):
     data[i] = data[i]+offset
 
-# see https://github.com/mlueft?tab=repositories
+# see https://github.com/mlueft/WaveFile
 #     project WaveFile
 file = WaveFile.WaveFile(samplingRate,resolution,channels)
 file.save( "sound.wav", data )
