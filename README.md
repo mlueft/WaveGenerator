@@ -21,11 +21,12 @@ p = SineWavePlugin( 3 )
 w.addPlugin( p )
 
 # Generates the wave data for 1000 milliseconds.
-# It returns a List with 10000(sampling rate * length) values
+# It returns a List with 10(sampling rate * length/1000) values
 data = w.generate( 1000 )
 
 # Prints values between -1 and 1 because standart amplitude
 # is 1
+print len(data)
 print max(data)
 print min(data)
 ```
