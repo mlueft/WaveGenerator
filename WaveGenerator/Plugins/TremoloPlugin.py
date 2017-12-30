@@ -1,6 +1,6 @@
 from ..WaveGenerator import WaveGenerator
 from WaveGeneratorPlugin import WaveGeneratorPlugin
-from WaveGenerator.Plugins.WavePlugin import WavePlugin
+from WaveGenerator.Plugins.SineWavePlugin import SineWavePlugin
 
 import random
 import math
@@ -21,7 +21,7 @@ class TremoloPlugin(WaveGeneratorPlugin):
         self.__wg.setSamplingRate(wg.getSamplingRate())
         self.__wg.setAmplitude(wg.getAmplitude()*self.__amplitude)
 
-        p = WavePlugin( WavePlugin.WF_SINUS, self.__frequency)
+        p = SineWavePlugin(  self.__frequency)
         self.__wg.addPlugin(p)
         self.__data = self.__wg.generate( length )
 

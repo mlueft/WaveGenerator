@@ -4,7 +4,7 @@ A Python wave generator with plugin system.
 # Example 1 - Simple sine wave
 ```python
 from WaveGenerator.WaveGenerator import WaveGenerator
-from WaveGenerator.Plugins.WavePlugin import WavePlugin
+from WaveGenerator.Plugins.SineWavePlugin import SineWavePlugin
 
 # Instantiate the WaveGenerator class.
 w = WaveGenerator()
@@ -15,7 +15,7 @@ w.setSamplingRate(10)
 
 # Instantiates a Wave plugin to generate a sine wave
 # with 3 Hz.
-p = WavePlugin( WavePlugin.WF_SINUS, 3 )
+p = SineWavePlugin( 3 )
 
 # Adds the plugin to the wave generator
 w.addPlugin( p )
@@ -28,7 +28,6 @@ data = w.generate( 1000 )
 # is 1
 print max(data)
 print min(data)
-
 ```
 
 # Example 2 - Adding an envelope 
@@ -38,7 +37,7 @@ that can be used in an wave file.
 
 ```python
 from WaveGenerator.WaveGenerator import WaveGenerator
-from WaveGenerator.Plugins.WavePlugin import WavePlugin
+from WaveGenerator.Plugins.SineWavePlugin import SineWavePlugin
 from WaveGenerator.Plugins.ADSRPlugin import ADSRPlugin
 
 samplingRate = 22000
@@ -68,7 +67,7 @@ w.setAmplitude(amplitude)
 
 # Instantiates a Wave plugin to generate a sine wave
 # with 440 Hz.
-p = WavePlugin( WavePlugin.WF_SINUS, 440 )
+p = SineWavePlugin(  440 )
 
 # Adds the plugin to the wave generator
 w.addPlugin( p )
@@ -98,7 +97,6 @@ for i in range(0,len(data)):
 # Prints values between 0 and 255
 print max(data)
 print min(data)
-
 ```
 
 # Example 3 - Writing a wave file 
@@ -108,7 +106,7 @@ see https://github.com/mlueft/WaveFile
 
 ```python
 from WaveGenerator.WaveGenerator import WaveGenerator
-from WaveGenerator.Plugins.WavePlugin import WavePlugin
+from WaveGenerator.Plugins.SineWavePlugin import SineWavePlugin
 from WaveGenerator.Plugins.ADSRPlugin import ADSRPlugin
 
 from WaveFile import WaveFile
@@ -140,7 +138,7 @@ w.setAmplitude(amplitude)
 
 # Instantiates a Wave plugin to generate a sine wave
 # with 440 Hz.
-p = WavePlugin( WavePlugin.WF_SINUS, 440 )
+p = SineWavePlugin( 440 )
 
 # Adds the plugin to the wave generator
 w.addPlugin( p )
@@ -178,7 +176,7 @@ In this example we add tremolo to the wave using the tremolo plugin
 
 ```python
 from WaveGenerator.WaveGenerator import WaveGenerator
-from WaveGenerator.Plugins.WavePlugin import WavePlugin
+from WaveGenerator.Plugins.SineWavePlugin import SineWavePlugin
 from WaveGenerator.Plugins.ADSRPlugin import ADSRPlugin
 from WaveGenerator.Plugins.TremoloPlugin import TremoloPlugin
 from WaveFile import WaveFile
@@ -210,7 +208,7 @@ w.setAmplitude(amplitude)
 
 # Instantiates a Wave plugin to generate a sine wave
 # with 440 Hz.
-p = WavePlugin( WavePlugin.WF_SINUS, 440 )
+p = SineWavePlugin( 440 )
 
 # Adds the plugin to the wave generator
 w.addPlugin( p )
@@ -248,5 +246,4 @@ for i in range(0,len(data)):
 #     project WaveFile
 file = WaveFile.WaveFile(samplingRate,resolution,channels)
 file.save( "sound.wav", data )
-
 ```
