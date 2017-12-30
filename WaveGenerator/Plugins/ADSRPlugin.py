@@ -65,12 +65,10 @@ class ADSRPlugin(WaveGeneratorPlugin):
             f = (cPos-self.__attackTime)/self.__decayTime
             return value*self.__sustainAmplitude+(value*(1-self.__sustainAmplitude))*(1-f)
 
-
         # RELEASE PHASE
         if self.__length-cPos < self.__releaseTime:
             f = (self.__length-cPos)/self.__releaseTime
             return value*self.__sustainAmplitude*f
-
 
         # SUSTAIN PHASE
         return value * self.__sustainAmplitude

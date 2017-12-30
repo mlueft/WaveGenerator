@@ -4,7 +4,7 @@ class WaveGenerator:
 
     def __init__(self):
         self.__samplingRate = 8000
-        self.__amplitude = 100
+        self.__amplitude = 1.0
         self.__plugins = {}
 
     ## Adds the given plugin to the list of plugins used
