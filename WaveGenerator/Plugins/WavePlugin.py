@@ -11,6 +11,11 @@ class WavePlugin(WaveGeneratorPlugin):
     WF_TRIANGLE = 3
     WF_SQUARE   = 4
 
+    ## 
+    #  @param   type        Type the the generated wave.
+    #                       Use one of the WavePlugin's static WF_ constants.
+    #  @param   frequency   Frequency of the tremolo effect.
+    #
     def __init__(self, type, frequency):
         self.__type = type
         self.__frequency = frequency
@@ -24,6 +29,16 @@ class WavePlugin(WaveGeneratorPlugin):
     #
     def getFrequency(self):
         return self.__frequency
+
+    ## Sets the type of the wave.
+    #
+    def setType(self, value):
+        self.__type = value
+
+    ## Returns the type of the wave.
+    #
+    def getType(self):
+        return self.__type
 
     def begin( self, wg, length, qtySamples ):
         self.__wg = wg

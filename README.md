@@ -42,7 +42,7 @@ from WaveGenerator.Plugins.WavePlugin import WavePlugin
 from WaveGenerator.Plugins.ADSRPlugin import ADSRPlugin
 
 samplingRate = 22000
-resolution   = 8		# 8 bit resolution for a simple wave file
+resolution   = 8        # 8 bit resolution for a simple wave file
 channels     = 1
 duration     = 800      # milli sec
 frequency    = 440.0
@@ -113,7 +113,7 @@ from WaveGenerator.Plugins.ADSRPlugin import ADSRPlugin
 from WaveFile import WaveFile
 
 samplingRate = 22000
-resolution   = 8		# 8 bit resolution for a simple wave file
+resolution   = 8        # 8 bit resolution for a simple wave file
 channels     = 1
 duration     = 800      # milli sec
 frequency    = 440.0
@@ -183,7 +183,7 @@ from WaveGenerator.Plugins.TremoloPlugin import TremoloPlugin
 from WaveFile import WaveFile
 
 samplingRate = 22000
-resolution   = 8		# 8 bit resolution for a simple wave file
+resolution   = 8        # 8 bit resolution for a simple wave file
 channels     = 1
 duration     = 800      # milli sec
 frequency    = 440.0
