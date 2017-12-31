@@ -258,3 +258,20 @@ The WaveGenerator comes with plugins for the most common wave forms:
 * SawDownWavePlugin
 
 Try to use TriangleWavePlugin instead of SineWavePlugin and watch the wave in your sound editor.
+
+# EnvelopPlugin
+The EnvelopPlugin allows you to create custom envelops
+The addValue function takes a timestamp in milli seconds
+and a factor.
+
+The following code mimicks a ADSR envelop with 100 ms attack time,
+100 ms decay, sustain level of 50% and a release time of 100 ms.
+
+```python
+p = EnvelopPlugin()
+p.addValue(0,0)
+p.addValue(100,1)
+p.addValue(200,0.5)
+p.addValue(700,0.5)
+p.addValue(800,0)
+```
