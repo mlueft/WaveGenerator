@@ -260,7 +260,7 @@ The WaveGenerator comes with plugins for the most common wave forms:
 Try to use TriangleWavePlugin instead of SineWavePlugin and watch the wave in your sound editor.
 
 # EnvelopPlugin
-The EnvelopPlugin allows you to create custom envelops
+The EnvelopPlugin allows you to create custom envelops.
 The addValue function takes a timestamp in milli seconds
 and a factor.
 
